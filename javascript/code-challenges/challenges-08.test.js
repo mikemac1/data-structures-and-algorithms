@@ -114,13 +114,19 @@ const isNum = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the inpuut contains the word 'world' all in lower-case letters, and false if the input does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
   // Solution code here...
-  regex = /world/gm;
+  let re = /world/gm;
+  let myArray = input.match(re);
+  if (myArray.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,6 +139,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let re = /world/gm;
+  let myArray = input.match(re);
+  if (myArray.length > 0) {
+    return true;
+  } else {
+    return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
