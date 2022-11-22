@@ -21,11 +21,12 @@ Becomes:
 function transformToLis(obj){
   // Solution code here...
   let newArray = [];
+
   for(var key in obj) {
-    newArray.push(<li>{key} : {obj.key}</li>);
+    newArray.push(`<li>${key}: ${obj[key]}</li>`);
   }
   return newArray;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -39,6 +40,14 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let newArray = [];
+
+  for (let i in input) {
+    for (let j in input[i]) {
+      newArray.push(input[i][j]);
+    }
+  }
+  return newArray.reduce((countTotal, integer) => target === integer ? countTotal += 1 : countTotal, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
